@@ -39,7 +39,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
     }
 
@@ -53,7 +53,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
     }
 
@@ -67,7 +67,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(Condition.exactText("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы."));
 
     }
 
@@ -80,7 +80,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения"));
+        $("[data-test-id='name'].input_invalid .input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения"));
 
     }
 
@@ -93,7 +93,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
 
     }
 
@@ -106,7 +106,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
     }
 
     @Test
@@ -118,7 +118,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
 
     }
 
@@ -131,7 +131,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(Condition.exactText("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678."));
 
 
     }
@@ -144,7 +144,7 @@ public class CallbackTest {
         form.$("[data-test-id=agreement]").click();
         form.$(".button").click();
 
-        $(".input_invalid .input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения"));
+        $("[data-test-id='phone'].input_invalid .input__sub").shouldHave(Condition.exactText("Поле обязательно для заполнения"));
 
     }
 
@@ -156,8 +156,8 @@ public class CallbackTest {
         form.$("[data-test-id=name] input").setValue("Виктория Викторовна");
         form.$("[data-test-id=phone] input").setValue("+79272323232");
         form.$(".button").click();
-        $(".input_invalid .checkbox__text").shouldHave(Condition.exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
+        $("[data-test-id='agreement'].input_invalid .checkbox__text").shouldHave(Condition.exactText("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй"));
     }
-
+    
 
 }
